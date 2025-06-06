@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Home() {
   const router = useRouter();
@@ -119,23 +120,27 @@ export default function Home() {
           Sample Cards
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
-          <a
+          <Link
             href="/profile/aarav"
             className="block p-6 sm:p-8 rounded-xl shadow-lg bg-white border border-blue-100 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 ease-in-out"
           >
-            <h4 className="text-xl font-bold text-blue-700">Aarav Mehta</h4>
-            <p className="text-gray-600 mt-1">Frontend Developer</p>
-            <p className="text-sm text-blue-500 mt-3 font-medium">→ View Demo</p>
-          </a>
+            <div>
+              <h4 className="text-xl font-bold text-blue-700">Aarav Mehta</h4>
+              <p className="text-gray-600 mt-1">Frontend Developer</p>
+              <p className="text-sm text-blue-500 mt-3 font-medium">→ View Demo</p>
+            </div>
+          </Link>
 
-          <a
+          <Link
             href="/profile/ishita"
             className="block p-6 sm:p-8 rounded-xl shadow-lg bg-white border border-purple-100 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 ease-in-out"
           >
-            <h4 className="text-xl font-bold text-purple-700">Ishita Sharma</h4>
-            <p className="text-gray-600 mt-1">Data Scientist</p>
-            <p className="text-sm text-purple-500 mt-3 font-medium">→ View Demo</p>
-          </a>
+            <div>
+              <h4 className="text-xl font-bold text-purple-700">Ishita Sharma</h4>
+              <p className="text-gray-600 mt-1">Data Scientist</p>
+              <p className="text-sm text-purple-500 mt-3 font-medium">→ View Demo</p>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
